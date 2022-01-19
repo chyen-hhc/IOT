@@ -45,11 +45,12 @@ client.on_message = recv_message
 
 temp = 30
 humi = 50
-longitude = geocoder.ip('me').lng
-latitude = geocoder.ip('me').lat
+
 light_intesity = 100
 counter = 0
 while True:
+    longitude = geocoder.ip('me').lng
+    latitude = geocoder.ip('me').lat
     collect_data = {'temperature': temp, 'humidity': humi, 'light':light_intesity, 'longitude':longitude, 'latitude':latitude}
     temp += 1
     humi += 1
